@@ -16,8 +16,7 @@
         {
             "src": "https://github.com/Mohammad-Babaei-DV/To-Do-List/main/b.png",
             "sizes": "144x144",
-            "type": "image/png",
-            "purpose": "any"
+            "type": "image/png"
         }
     ]
 }
