@@ -125,14 +125,15 @@
     </main>
 
     <script>
-  if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/serviceWorker.js')
-  .then(function(registration) {
-    console.log('Registration successful, scope is:', registration.scope);
-  })
-  .catch(function(error) {
-    console.log('Service worker registration failed, error:', error);
-  });
+if ("serviceWorker" in navigator) { 
+  navigator.serviceWorker
+     .register("serviceWorker.js") 
+    .then(reg => {
+       console.log("Service worker registred successfully", reg);
+     })
+     .catch(err => {
+       console.log("service worker not registred !!", err);
+     }); 
 }
     </script>
     <script src="assets/js/master.js"></script>
