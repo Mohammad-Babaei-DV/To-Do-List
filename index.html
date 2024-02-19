@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/stylesheet/icon.css">
+    <link rel="stylesheet" href="assets/stylesheet/dist/output.css">
+    <title>To do list</title>
+</head>
+<body class="font-primary w-full h-[100vh] m-0 p-0 box-border">
+
+    <main class=" box-border w-full h-[100vh] 2xl:container 2xl:mx-auto flex flex-wrap justify-center items-center content-center">
+        
+        
+        
+        
+        <section class="overflow-hidden relative md:rounded-[10px] shadow-2xl shadow-slate-950 h-[100vh] md:h-[80vh] w-full md:w-[70%] xl:w-[50%] flex flex-wrap justify-center content-center items-center">
+           
+            <div class="w-full relative h-full ">
+                <div class=" px-[20px] text-[#FFDD83] bg-[#00235B] w-full h-[50px] flex">
+                    <div class="w-[50%] h-full flex justify-start items-center" ><h1 id="day"></h1></div>
+                    <div class="w-[50%] h-full flex justify-end items-center" ><h1 id="time"></h1></div>
+                </div>
+                <div class="px-[20px] text-[#FFDD83] bg-[#00235B] w-full h-[70px] flex  ">
+                    <div id="item" class="w-[80%] flex justify-start items-center "> 0 Item</div>
+                    <div class="w-full flex flex-wrap justify-center content-center ">
+                        <i class="w-full flex justify-center items-center icon-star-filled text-[20px] text-[#98DFD6]"></i>
+                        <h1 class="w-full flex justify-center items-center text-[20px] text-[#98DFD6] font-bold">My Todo</h1>
+                    </div>
+                    <div class="flex justify-end items-center w-[90%] relative  ">
+                        <ul class="hidden lg:flex flex-wrap  w-[50%] h-full justify-end items-center content-around">
+                            <li id="compeletAll" class="rounded-[5px] hover:bg-[#FFDD83] hover:text-[#00235B] duration-[.4s] cursor-pointer   flex justify-center items-center w-[95%] h-[40%] ">All Done</li>
+                            <li id="removeAll" class="rounded-[5px]   hover:bg-[#FFDD83] hover:text-[#00235B] duration-[.4s] cursor-pointer  flex justify-center items-center   w-[95%] h-[40%] ">Remove All</li>
+                        </ul>
+                        <i id="target1" class="cursor-pointer rotate-90 icon-dot-3 lg:hidden"></i>
+
+                        <ul id="target2" class="rounded-[5px] z-[100] hidden absolute right-0  bottom-[-70px] bg-[#00235B] flex-wrap w-[150px] h-full justify-between items-center border-[2px] border-[#FFDD83]">
+                            <li id="compeletAll" class="hover:bg-[#FFDD83] hover:text-[#00235B] duration-[.4s] cursor-pointer flex justify-center items-center w-full h-[50%] border-b-[.5px] border-[#ffde83] ">Compelet All </li>
+                            <li id="removeAll" class="hover:bg-[#FFDD83] hover:text-[#00235B] duration-[.4s] cursor-pointer flex justify-center items-center w-full h-[50%] ">Remove All</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div id="main" class="w-full overflow-x-hidden relative">
+
+
+                    
+                    
+                    <div id="extra" class="absolute z-[150] top-[-100%] duration-[.4s] rounded-b-[10px] w-full h-full flex justify-center content-around">
+                        <div class="  w-full h-[55vh] md:h-[48vh] xl:h-[52vh] bg-blue-300 rounded-b-[10px] border-[5px] border-[#00235B] flex flex-wrap justify-around">
+                            
+                            <span class="w-full flex justify-center items-center text-[50px] ">Let's Go</span>
+
+                            <div class="w-full flex flex-wrap justify-center items-center ">
+                                <div class=" w-full flex justify-center items-center py-[5px] "><span id="warning"   class="flex justify-center items-center w-full h-full text-blue-300"> <i class="icon-warning"></i>Please Enter Something!</span></div>
+                                <textarea spellcheck="false" id="textarea" class="resize-none mx-[20px] p-[10px] rounded-[5px]"  id="" cols="40" rows="3" ></textarea>
+                            </div>
+
+                            <div class="w-full flex justify-center items-center">
+                                <button id="dicard" class="w-[100px] h-[40px] flex justify-center items-center content-center border-[2px] border-[#00235B] rounded-[5px] p-[5px] mx-[10px]">Discard</button>
+                                <button id="save" class="w-[100px] h-[40px] flex justify-center items-center content-center border-[2px] border-[#00235B] rounded-[5px] p-[5px] mx-[10px]">Save</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+
+                    
+                    <div id="editpage" class="absolute z-[2000] top-0 left-[-100%] duration-[.4s] rounded-b-[10px] w-full h-full flex justify-center content-around">
+                        <div class="  w-full h-[55vh] md:h-[48vh] xl:h-[52vh] bg-blue-300 rounded-b-[10px] border-[5px] border-[#00235B] flex flex-wrap justify-around">
+                            
+                           <i class="icon-pencil-circled w-full text-[50px] flex justify-center items-center"></i>
+
+                            <div class="w-full flex flex-wrap justify-center items-center ">
+                                <div class=" w-full flex justify-center items-center py-[5px] "><span id="warning1" class="flex justify-center items-center w-full h-full text-blue-300"> <i class="icon-warning"></i>Please Enter Something!</span></div>
+                                <textarea spellcheck="false" id="textarea1" class="resize-none mx-[20px] p-[10px] rounded-[5px]"  id="" cols="40" rows="3" ></textarea>
+                            </div>
+
+                            <div class="w-full flex justify-center items-center">
+                                <button onclick="myDicard()" class="w-[100px] h-[40px] flex justify-center items-center content-center border-[2px] border-[#00235B] rounded-[5px] p-[5px] mx-[10px]">Discard</button>
+                                <button  onclick="mySave()"   class="w-[100px] h-[40px] flex justify-center items-center content-center border-[2px] border-[#00235B] rounded-[5px] p-[5px] mx-[5px]">Save</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <main  class=" flex flex-wrap justify-center  bg-white w-[calc(100%+20px)] h-[calc(100vh+20px)] pr-[20px] overflow-y-scroll">
+
+                        
+                        <div id="cont" class="w-[90%] ">
+                            
+                        </div> 
+                        
+                        <section class="w-full h-[50vh]"></section>
+                        
+                    </main>
+                    <span id="st" class="fixed top-0 left-0"></span>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <div  class="absolute z-[160] bottom-[50px] md:bottom-0 right-0 h-[70px] flex justify-end items-center ">
+                    <i id="addd" class="hover:text-blue-300 duration-[.4s] flex justify-end items-center cursor-pointer icon-plus-circled text-[40px] text-[#00235B]"></i>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/master.js"></script>
+</body>
+</html>
+
+
+ 
