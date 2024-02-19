@@ -16,7 +16,8 @@
         {
             "src": "https://github.com/Mohammad-Babaei-DV/To-Do-List/b.png",
             "sizes": "144x144",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "maskable"
         }
     ]
 }
